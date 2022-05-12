@@ -1,5 +1,18 @@
 <?php
 /**
+ * Функция, определяющая краткий путь
+ */
+function findShort($matrix, $start, $end)
+{
+    $size = count($matrix);
+    $minway = array($size);
+
+    for ($x = 0; $x < $size; $x++) {
+        $minway[$x] = -1;
+    }
+    return findShortWay($matrix, $start, $end, $minway)[1];
+}
+/**
  * Рекурсивная функция, которая проводит кратчайший путь
  */
 function findShortWay($matrix, $start, $end, $minway)
@@ -13,8 +26,8 @@ function findShortWay($matrix, $start, $end, $minway)
 
     $isFind = false;
     $min = 99999999;
-    for($x = 0; $x < $size; $x++)
-    {
+
+    for($x = 0; $x < $size; $x++) {
         if($matrix[$x][$end] != '*') {
             if($minway[$x] != -2) {
                 if ($minway[$x] == -1) {
@@ -24,8 +37,8 @@ function findShortWay($matrix, $start, $end, $minway)
                 }
                 $path = $matrix[$x][$end] + $minway[$x];
 
-                if ($path < $min) $min = $path;
-                {
+                if ($path < $min) {
+                    $min = $path;
                     $isFind = true;
                 }
             }
@@ -38,18 +51,6 @@ function findShortWay($matrix, $start, $end, $minway)
     } else {
         return [-1, $minway];
     }
-}
-/**
- * Функция, определяющая краткий путь
- */
-function findShort($matrix, $start, $end)
-{
-    $size = count($matrix);
-    $minway = array($size);
-    for ($x = 0; $x < $size; $x++) {
-        $minway[$x] = -1;
-    }
-    return findShortWay($matrix, $start, $end, $minway)[1];
 }
 /**
  * Функция определения траектории кратчайшего пути
@@ -93,19 +94,19 @@ function findWay($matrix, $minway, $start, $end)
  * Функция определения правильности ввода
  */
 function Validate ($matrix, $start, $end) {
-    for($x = 0; $x < count($matrix); $x++){
-        for($y = 0; $y < count($matrix)[$x]; $y++) {
-            if ($matrix[$x][$y] != '*' && !is_numeric($matrix[$x][$y]) && !is_int($matrix[$x][$y])) {
-
-                $error_text = "Не верный формат данных. Таблица должна состоять из звёздочек и натуральных чисел.";
-                return $error_text;
-            }
-        }
-    }
     for($x = 0; $x < count($matrix); $x++) {
         if (count($matrix) != count($matrix[$x])) {
             $error_text = "Матрица должна быть квадратной.";
             return $error_text;
+        }
+    }
+    for($x = 0; $x < count($matrix); $x++){
+        for($y = 0; $y < count($matrix); $y++) {
+            if ($matrix[$x][$y] != '*' && !is_numeric($matrix[$x][$y]) && !is_int($matrix[$x][$y])) {
+
+                $error_text = "Неверный формат данных. Таблица должна состоять из звёздочек и натуральных чисел.";
+                return $error_text;
+            }
         }
     }
     if (!is_numeric($start) || !is_numeric($end)) {
@@ -135,8 +136,8 @@ if($error_text == "") {
             }
         }
         if ($countBreak > 0) {
-            echo $minway[$end];
-            echo "<br>";
+            echo "Кратчайший путь: ", $minway[$end];
+            echo "<br>Траектория кратчайшего пути: ";
             findWay($matrix, $minway, $start, $end);
         } else {
             echo "Невозможно найти путь.";
