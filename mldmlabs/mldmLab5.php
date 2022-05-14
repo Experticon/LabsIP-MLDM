@@ -15,7 +15,11 @@
     <table>
         <tr>
             <td> Введите матрицу смежности графа (n*n) </td>
-            <td> <textarea id="mass" value="" rows = "10" cols = "20" size=""></textarea></td>
+            <td> <textarea id="mass" value="" rows = "10" cols = "20" size=""
+                           placeholder="Пример ввода:
+* 7 *
+* * 3
+1 * *"></textarea></td>
         </tr>
         <tr>
             <td colspan="2"> <input type="button" value="Сделать расчёт"  onclick="sendmass();"/></td>
