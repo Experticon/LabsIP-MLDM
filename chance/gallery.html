@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/scripts/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="styles/stylesIn.css" type="text/css">
+    <link rel="stylesheet" href="styles/galstyle.css" type="text/css">
+    <script type="text/javascript" src="/scripts/galScript.js"></script>
+    <title>Галерея</title>
+</head>
+<body>
+    <header class="containHeader">
+        <div class="logo">
+            <a href="index.html">
+                <img class="logoimg" src="/images/logo.jpg">
+            </a>
+        </div>
+        <div class="gallery">
+            <a href="gallery.html">
+                <img class="galimg" src="/images/galler.jpg">
+            </a>
+        </div>
+        <div>
+            <a href="reg.php" class="autorization">Регистрация</a>
+            <a href="auto.php" class="autorization">Авторизация</a>
+        </div>
+    </header>
+
+    <div class="containGal">
+        <div class="container">
+        <div class="button" onclick="leftImage()">🢀</div>
+            <div>
+                <div id="mainIm"></div>
+            </div>
+        <div class="button" onclick="rightImage()">🢂</div>
+        </div>
+    </div>
+</body>
+</html>

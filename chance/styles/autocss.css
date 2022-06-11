@@ -1,0 +1,76 @@
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.forms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0px 0px 0px;
+}
+.forms2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 0px 0px;
+}
+input {
+    margin: 10px 0;
+    paddiing: 10px;
+    border-bottom: 2px solid #00ffaa;
+    border:unset;
+    outline: none;
+}
+button {
+    paddiing: 10px;
+    background: #00ffaa;
+    border:unset;
+}
+label {
+    ont-family:FANTASY;
+    color: rgba(35, 225, 35, 0.98);
+    font-size: 20px;
+    text-shadow:
+            0 0 3px rgba(255, 255, 255, 0.55),
+            0 0 14px #0fa;
+    font-weight:500;
+    text-align:center;
+}
+.litext{
+    font-family:FANTASY;
+    color: rgba(35, 225, 35, 0.98);
+    font-size: 20px;
+    text-shadow:
+            0 0 3px rgba(255, 255, 255, 0.55),
+            0 0 14px #0fa;
+    font-weight:400;
+}
+.perehod {
+    font-family:FANTASY;
+    color: rgba(35, 225, 35, 0.98);
+    font-size: 20px;
+    text-shadow:
+            0 0 3px rgba(255, 255, 255, 0.55),
+            0 0 14px #0fa;
+    font-weight:400;
+    text-decoration: none;
+}
+.msg {
+    border: 2px solid rgba(178, 20, 50, 0.98);
+    border-radius: 3px;
+    padding: 10px 0;
+    font-family:FANTASY;
+    color: rgb(234, 230, 7);
+    font-size: 20px;
+    text-shadow:
+            0 0 3px rgba(255, 255, 255, 0.55),
+            0 0 14px rgba(234, 230, 7, 0.62);
+    font-weight:400;
+    text-decoration: none;
+}
+p {
+    margin: 10px 0;
+}

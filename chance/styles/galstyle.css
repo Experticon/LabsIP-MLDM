@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+}
+.containGal {
+    width: 1536px;
+    display: inline-flex;
+}
+.containGal .container {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto
+}
+#mainIm {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button {
+    font-family:FANTASY;
+    color: rgba(35, 225, 35, 0.98);
+    font-size: 80px;
+    text-shadow:
+            0 0 3px rgba(255, 255, 255, 0.55),
+            0 0 14px #0fa;
+    font-weight:500;
+    text-align:center;
+
+}
+.button:hover {
+    /*background: gold;*/
+}
